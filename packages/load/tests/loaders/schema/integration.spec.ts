@@ -72,5 +72,12 @@ describe('loadSchema', () => {
         }
       `);
     });
-})
+
+    test('this fails', async () => {
+      const schema = await load('./tests/loaders/schema/test-files-interface/*.graphql', {
+        loaders: [new GraphQLFileLoader()]
+      });
+      expect(schema.getTypeMap().Bizz).toBeDefined();
+    });
+  });
 });

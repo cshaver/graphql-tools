@@ -1,0 +1,15 @@
+interface Bizz {
+  fuzz: Fuzz
+}
+
+enum Fuzz {
+  WUZZ
+}
+
+type Query {
+  bizz: Bizz
+}
+
+schema {
+  query: Query
+}
